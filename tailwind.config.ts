@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				music: {
+					primary: '#8B5CF6',
+					secondary: '#A855F7',
+					accent: '#EC4899',
+					dark: '#0F0F23',
+					darker: '#0A0A1A',
+					card: '#1A1A2E',
+					muted: '#16213E'
 				}
+			},
+			backgroundImage: {
+				'gradient-music': 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)',
+				'gradient-dark': 'linear-gradient(135deg, #0F0F23 0%, #1A1A2E 100%)',
+				'gradient-card': 'linear-gradient(135deg, #1A1A2E 0%, #16213E 100%)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +99,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px rgba(139, 92, 246, 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 30px rgba(139, 92, 246, 0.6)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'slide-up': 'slide-up 0.4s ease-out',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
 			}
 		}
 	},
